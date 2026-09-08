@@ -1,0 +1,2033 @@
+{
+  "name": "PaiAgent",
+  "description": "PaiAgent is an enterprise-level AI workflow visual orchestration platform for building, orchestrating, and executing AI workflows through a drag-and-drop interface. It combines a custom DAG workflow engine with LangGraph4j state-graph orchestration and Spring AI for unified multi-model access, driven by a React/ReactFlow visual editor. Note: this project has over 100 source files; consider scoping analysis to a subdirectory for faster results.",
+  "languages": [
+    "css",
+    "html",
+    "java",
+    "javascript",
+    "json",
+    "markdown",
+    "python",
+    "sql",
+    "typescript",
+    "xml",
+    "yaml"
+  ],
+  "frameworks": [
+    "Ant Design",
+    "JUnit",
+    "LangGraph4j",
+    "MyBatis-Plus",
+    "React",
+    "React Router",
+    "ReactFlow",
+    "Spring AI",
+    "Spring Boot",
+    "Spring Data",
+    "Spring Web",
+    "Tailwind CSS",
+    "Vite",
+    "Zustand"
+  ],
+  "files": [
+    {
+      "path": ".feisuan/.ymlignore",
+      "language": "unknown",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".feisuan/rules/project_rule.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".java-version",
+      "language": "java",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".qoder/quests/ai-agent-flow-builder.md",
+      "language": "markdown",
+      "sizeLines": 782,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".qoder/quests/ai-agent-flow-editor.md",
+      "language": "markdown",
+      "sizeLines": 842,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".qoder/quests/readme-optimization.md",
+      "language": "markdown",
+      "sizeLines": 358,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".qoder/settings.json",
+      "language": "json",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".qoder/specs/spring-ai-integration.md",
+      "language": "markdown",
+      "sizeLines": 283,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".ua/intermediate/README_CONTEXT.md",
+      "language": "markdown",
+      "sizeLines": 6,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 139,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BOOT-INF/classes/com/paiagent/dto/LoginRequest.class",
+      "language": "class",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 819,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/.env.example",
+      "language": "config",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/.gitattributes",
+      "language": "unknown",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/.qoder/specs/langgraph4j-integration/design.md",
+      "language": "markdown",
+      "sizeLines": 1544,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/.qoder/specs/langgraph4j-integration/tasks.md",
+      "language": "markdown",
+      "sizeLines": 1319,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/README.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/list",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/pom.xml",
+      "language": "xml",
+      "sizeLines": 197,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/show",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/PaiAgentApplication.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/common/Result.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/ConfigValidationRunner.java",
+      "language": "java",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/JwtSecretProvider.java",
+      "language": "java",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/MinioConfig.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/MyMetaObjectHandler.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/SchemaMigrationRunner.java",
+      "language": "java",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/StaticResourceConfig.java",
+      "language": "java",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/config/WebConfig.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/AuthController.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/ExecutionController.java",
+      "language": "java",
+      "sizeLines": 278,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/KnowledgeBaseController.java",
+      "language": "java",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/LLMConfigController.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/McpToolConfigController.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/MediaController.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/NodeDefinitionController.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/SkillController.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/controller/WorkflowController.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/AgentPlanWebSearchMcpRequest.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionComparisonResponse.java",
+      "language": "java",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "language": "java",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionRequest.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionSnapshotResponse.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ExecutionVariableResponse.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/KnowledgeBaseRequest.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/KnowledgePreviewRequest.java",
+      "language": "java",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/KnowledgeSearchRequest.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/KnowledgeTextImportRequest.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/LoginRequest.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/LoginResponse.java",
+      "language": "java",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/McpToolConfigRequest.java",
+      "language": "java",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/McpToolTestRequest.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/RefreshTokenRequest.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/ResumeExecutionRequest.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/WorkflowRequest.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/dto/WorkflowResponse.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/EngineSelector.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/WorkflowConfigParser.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/WorkflowEngine.java",
+      "language": "java",
+      "sizeLines": 702,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/WorkflowExecutor.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/AgentToolRegistry.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/KnowledgeRetrieveTool.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/LoadSkillDetailTool.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/LoadSkillReferenceTool.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/MemoryRetrieveTool.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/MemoryWriteTool.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/ReadCurrentInputTool.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/WebFetchTool.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/agent/tool/WebSearchTool.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/dag/DAGParser.java",
+      "language": "java",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/NodeExecutorFactory.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/AIPingNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/AbstractAgentPlanNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/AbstractLLMNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 595,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/ConditionNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/DeepSeekNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/ImageGenerateNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/InputNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/KnowledgeRetrieveNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/KnowledgeUpsertNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/LlmNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/MemoryRetrieveNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/MemoryWriteNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/OpenAINodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/OutputNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/QwenNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/ReActAgentNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 383,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/StepNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/TTSNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 671,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/VideoGenerateNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/VisionAnalyzeNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/WebFetchNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/WebSearchNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/executor/impl/ZhiPuNodeExecutor.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/langgraph/LangGraphWorkflowEngine.java",
+      "language": "java",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/langgraph/WorkflowState.java",
+      "language": "java",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/langgraph/adapter/NodeAdapter.java",
+      "language": "java",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/langgraph/builder/GraphBuilder.java",
+      "language": "java",
+      "sizeLines": 155,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/langgraph/state/StateManager.java",
+      "language": "java",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/llm/ChatClientFactory.java",
+      "language": "java",
+      "sizeLines": 255,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/llm/LLMNodeConfig.java",
+      "language": "java",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/llm/PromptTemplateService.java",
+      "language": "java",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "language": "java",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/skill/LoadSkillDetailFunction.java",
+      "language": "java",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/skill/LoadSkillReferenceFunction.java",
+      "language": "java",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/skill/Skill.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/skill/SkillLoader.java",
+      "language": "java",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java",
+      "language": "java",
+      "sizeLines": 327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/ExecutionSnapshot.java",
+      "language": "java",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/ExecutionVariable.java",
+      "language": "java",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/KnowledgeBase.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/KnowledgeChunk.java",
+      "language": "java",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/KnowledgeDocument.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/KnowledgeIndexTask.java",
+      "language": "java",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java",
+      "language": "java",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/McpToolConfig.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/NodeDefinition.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "language": "java",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/interceptor/AuthInterceptor.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/ExecutionSnapshotMapper.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/ExecutionVariableMapper.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/KnowledgeBaseMapper.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/KnowledgeChunkMapper.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/KnowledgeDocumentMapper.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/KnowledgeIndexTaskMapper.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/LLMGlobalConfigMapper.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/McpToolConfigMapper.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/NodeDefinitionMapper.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/mapper/WorkflowMapper.java",
+      "language": "java",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "language": "java",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "language": "java",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/AgnesVideoClient.java",
+      "language": "java",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/AuthService.java",
+      "language": "java",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java",
+      "language": "java",
+      "sizeLines": 658,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/LLMGlobalConfigService.java",
+      "language": "java",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/McpToolConfigService.java",
+      "language": "java",
+      "sizeLines": 248,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/MinioService.java",
+      "language": "java",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/NodeDefinitionService.java",
+      "language": "java",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/OpenAiCompatibleImageClient.java",
+      "language": "java",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/SearchInfinityMcpClient.java",
+      "language": "java",
+      "sizeLines": 677,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/StepFunImageClient.java",
+      "language": "java",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java",
+      "language": "java",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/java/com/paiagent/service/WorkflowService.java",
+      "language": "java",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/main/resources/application.yml",
+      "language": "yaml",
+      "sizeLines": 86,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V20250520__add_execution_snapshot_tables.sql",
+      "language": "sql",
+      "sizeLines": 38,
+      "fileCategory": "data"
+    },
+    {
+      "path": "backend/src/main/resources/mapper/ExecutionSnapshotMapper.xml",
+      "language": "xml",
+      "sizeLines": 48,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/src/main/resources/mapper/ExecutionVariableMapper.xml",
+      "language": "xml",
+      "sizeLines": 38,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/src/main/resources/migration_add_engine_type.sql",
+      "language": "sql",
+      "sizeLines": 16,
+      "fileCategory": "data"
+    },
+    {
+      "path": "backend/src/main/resources/schema.sql",
+      "language": "sql",
+      "sizeLines": 278,
+      "fileCategory": "data"
+    },
+    {
+      "path": "backend/src/main/resources/skills/ai-podcast/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/src/main/resources/skills/ai-podcast/reference/script-template.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/src/main/resources/skills/ai-podcast/reference/voice-guide.md",
+      "language": "markdown",
+      "sizeLines": 100,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/PaiAgentApplicationTests.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/ConditionBranchRoutingTest.java",
+      "language": "java",
+      "sizeLines": 306,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/WorkflowConfigParserTest.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/agent/tool/KnowledgeRetrieveToolTest.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/executor/impl/ConditionNodeExecutorTest.java",
+      "language": "java",
+      "sizeLines": 415,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/executor/impl/ImageGenerateNodeExecutorTest.java",
+      "language": "java",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/executor/impl/VideoGenerateNodeExecutorTest.java",
+      "language": "java",
+      "sizeLines": 579,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/langgraph/LangGraphBasicTest.java",
+      "language": "java",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/langgraph/LangGraphWorkflowEngineTest.java",
+      "language": "java",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/engine/llm/ChatClientFactoryTest.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/AgentPlanConfigResolverTest.java",
+      "language": "java",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/AgnesVideoClientTest.java",
+      "language": "java",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/AuthServiceTest.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/KnowledgeBaseServiceTest.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/OpenAiCompatibleImageClientTest.java",
+      "language": "java",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/src/test/java/com/paiagent/service/StepFunImageClientTest.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/.env.example",
+      "language": "config",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/README.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "language": "javascript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/index.html",
+      "language": "html",
+      "sizeLines": 13,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "frontend/package.json",
+      "language": "json",
+      "sizeLines": 41,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/postcss.config.js",
+      "language": "javascript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/auth.ts",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/knowledge.ts",
+      "language": "typescript",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/llmConfig.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/mcpTools.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/media.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/skill.ts",
+      "language": "typescript",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/api/workflow.ts",
+      "language": "typescript",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/AudioPlayer.tsx",
+      "language": "typescript",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/DebugDrawer.tsx",
+      "language": "typescript",
+      "sizeLines": 1019,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/FlowCanvas.tsx",
+      "language": "typescript",
+      "sizeLines": 358,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/LLMConfigModal.tsx",
+      "language": "typescript",
+      "sizeLines": 479,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/NodePanel.tsx",
+      "language": "typescript",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/SkillSelector.tsx",
+      "language": "typescript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/config/api.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/index.css",
+      "language": "css",
+      "sizeLines": 1481,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/EditorPage.tsx",
+      "language": "typescript",
+      "sizeLines": 2984,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/KnowledgePage.tsx",
+      "language": "typescript",
+      "sizeLines": 501,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/LoginPage.tsx",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/MainPage.tsx",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/McpToolPage.tsx",
+      "language": "typescript",
+      "sizeLines": 297,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/store/authStore.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/store/llmConfigStore.ts",
+      "language": "typescript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/store/workflowStore.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/utils/auth.ts",
+      "language": "typescript",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/utils/provider.ts",
+      "language": "typescript",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/utils/request.ts",
+      "language": "typescript",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/utils/workflowNode.ts",
+      "language": "typescript",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/vite-env.d.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/tailwind.config.js",
+      "language": "javascript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/tsconfig.app.json",
+      "language": "json",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "language": "json",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/tsconfig.node.json",
+      "language": "json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "show",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test_llm_config.py",
+      "language": "python",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 220,
+  "filteredByIgnore": 10,
+  "estimatedComplexity": "large",
+  "importMap": {
+    ".feisuan/.ymlignore": [],
+    ".feisuan/rules/project_rule.md": [],
+    ".java-version": [],
+    ".qoder/quests/ai-agent-flow-builder.md": [],
+    ".qoder/quests/ai-agent-flow-editor.md": [],
+    ".qoder/quests/readme-optimization.md": [],
+    ".qoder/settings.json": [],
+    ".qoder/specs/spring-ai-integration.md": [],
+    ".ua/intermediate/README_CONTEXT.md": [],
+    "AGENTS.md": [],
+    "BOOT-INF/classes/com/paiagent/dto/LoginRequest.class": [],
+    "README.md": [],
+    "backend/.env.example": [],
+    "backend/.gitattributes": [],
+    "backend/.qoder/specs/langgraph4j-integration/design.md": [],
+    "backend/.qoder/specs/langgraph4j-integration/tasks.md": [],
+    "backend/README.md": [],
+    "backend/list": [],
+    "backend/pom.xml": [],
+    "backend/show": [],
+    "backend/src/main/java/com/paiagent/PaiAgentApplication.java": [],
+    "backend/src/main/java/com/paiagent/common/Result.java": [],
+    "backend/src/main/java/com/paiagent/config/ConfigValidationRunner.java": [],
+    "backend/src/main/java/com/paiagent/config/JwtSecretProvider.java": [],
+    "backend/src/main/java/com/paiagent/config/MinioConfig.java": [],
+    "backend/src/main/java/com/paiagent/config/MyMetaObjectHandler.java": [],
+    "backend/src/main/java/com/paiagent/config/SchemaMigrationRunner.java": [],
+    "backend/src/main/java/com/paiagent/config/StaticResourceConfig.java": [],
+    "backend/src/main/java/com/paiagent/config/WebConfig.java": [
+      "backend/src/main/java/com/paiagent/interceptor/AuthInterceptor.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/AuthController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/dto/LoginRequest.java",
+      "backend/src/main/java/com/paiagent/dto/LoginResponse.java",
+      "backend/src/main/java/com/paiagent/dto/RefreshTokenRequest.java",
+      "backend/src/main/java/com/paiagent/service/AuthService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/ExecutionController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionRequest.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionSnapshotResponse.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionVariableResponse.java",
+      "backend/src/main/java/com/paiagent/dto/ResumeExecutionRequest.java",
+      "backend/src/main/java/com/paiagent/engine/EngineSelector.java",
+      "backend/src/main/java/com/paiagent/engine/WorkflowEngine.java",
+      "backend/src/main/java/com/paiagent/engine/WorkflowExecutor.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionSnapshot.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionVariable.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionSnapshotMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionVariableMapper.java",
+      "backend/src/main/java/com/paiagent/service/WorkflowService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/KnowledgeBaseController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgeBaseRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgePreviewRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgeSearchRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgeTextImportRequest.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/LLMConfigController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java",
+      "backend/src/main/java/com/paiagent/service/LLMGlobalConfigService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/McpToolConfigController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/dto/AgentPlanWebSearchMcpRequest.java",
+      "backend/src/main/java/com/paiagent/dto/McpToolConfigRequest.java",
+      "backend/src/main/java/com/paiagent/dto/McpToolTestRequest.java",
+      "backend/src/main/java/com/paiagent/service/McpToolConfigService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/MediaController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/NodeDefinitionController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/entity/NodeDefinition.java",
+      "backend/src/main/java/com/paiagent/service/NodeDefinitionService.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/SkillController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/engine/skill/Skill.java",
+      "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java"
+    ],
+    "backend/src/main/java/com/paiagent/controller/WorkflowController.java": [
+      "backend/src/main/java/com/paiagent/common/Result.java",
+      "backend/src/main/java/com/paiagent/dto/WorkflowRequest.java",
+      "backend/src/main/java/com/paiagent/dto/WorkflowResponse.java",
+      "backend/src/main/java/com/paiagent/service/WorkflowService.java"
+    ],
+    "backend/src/main/java/com/paiagent/dto/AgentPlanWebSearchMcpRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionComparisonResponse.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionSnapshotResponse.java": [],
+    "backend/src/main/java/com/paiagent/dto/ExecutionVariableResponse.java": [],
+    "backend/src/main/java/com/paiagent/dto/KnowledgeBaseRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/KnowledgePreviewRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/KnowledgeSearchRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/KnowledgeTextImportRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/LoginRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/LoginResponse.java": [],
+    "backend/src/main/java/com/paiagent/dto/McpToolConfigRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/McpToolTestRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/RefreshTokenRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/ResumeExecutionRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/WorkflowRequest.java": [],
+    "backend/src/main/java/com/paiagent/dto/WorkflowResponse.java": [],
+    "backend/src/main/java/com/paiagent/engine/EngineSelector.java": [
+      "backend/src/main/java/com/paiagent/entity/Workflow.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/WorkflowConfigParser.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/WorkflowEngine.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/dto/ResumeExecutionRequest.java",
+      "backend/src/main/java/com/paiagent/engine/dag/DAGParser.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutorFactory.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionSnapshot.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionVariable.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionSnapshotMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionVariableMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/WorkflowExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java": [],
+    "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/AgentToolRegistry.java": [],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/KnowledgeRetrieveTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/LoadSkillDetailTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/LoadSkillReferenceTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/MemoryRetrieveTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/MemoryWriteTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/ReadCurrentInputTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/WebFetchTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/agent/tool/WebSearchTool.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/entity/McpToolConfig.java",
+      "backend/src/main/java/com/paiagent/service/McpToolConfigService.java",
+      "backend/src/main/java/com/paiagent/service/SearchInfinityMcpClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/dag/DAGParser.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/NodeExecutorFactory.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/AIPingNodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/AbstractAgentPlanNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/AbstractLLMNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/llm/ChatClientFactory.java",
+      "backend/src/main/java/com/paiagent/engine/llm/LLMNodeConfig.java",
+      "backend/src/main/java/com/paiagent/engine/llm/PromptTemplateService.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/engine/skill/Skill.java",
+      "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java",
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java",
+      "backend/src/main/java/com/paiagent/service/LLMGlobalConfigService.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/ConditionNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/DeepSeekNodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/ImageGenerateNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java",
+      "backend/src/main/java/com/paiagent/service/OpenAiCompatibleImageClient.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/StepFunImageClient.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/InputNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/KnowledgeRetrieveNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/KnowledgeUpsertNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/LlmNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/MemoryRetrieveNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/MemoryWriteNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentMemoryService.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/OpenAINodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/OutputNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/QwenNodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/ReActAgentNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentTool.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolRegistry.java",
+      "backend/src/main/java/com/paiagent/engine/llm/LLMNodeConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/engine/skill/Skill.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/StepNodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/TTSNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java",
+      "backend/src/main/java/com/paiagent/service/LLMGlobalConfigService.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/VideoGenerateNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/AgnesVideoClient.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/VisionAnalyzeNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/llm/ChatClientFactory.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/WebFetchNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/WebSearchNodeExecutor.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/McpToolConfig.java",
+      "backend/src/main/java/com/paiagent/service/McpToolConfigService.java",
+      "backend/src/main/java/com/paiagent/service/SearchInfinityMcpClient.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/executor/impl/ZhiPuNodeExecutor.java": [],
+    "backend/src/main/java/com/paiagent/engine/langgraph/LangGraphWorkflowEngine.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/engine/WorkflowConfigParser.java",
+      "backend/src/main/java/com/paiagent/engine/WorkflowExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/langgraph/builder/GraphBuilder.java",
+      "backend/src/main/java/com/paiagent/engine/langgraph/state/StateManager.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/langgraph/WorkflowState.java": [],
+    "backend/src/main/java/com/paiagent/engine/langgraph/adapter/NodeAdapter.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutorFactory.java",
+      "backend/src/main/java/com/paiagent/engine/langgraph/WorkflowState.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/langgraph/builder/GraphBuilder.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/langgraph/adapter/NodeAdapter.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/langgraph/state/StateManager.java": [
+      "backend/src/main/java/com/paiagent/engine/langgraph/WorkflowState.java"
+    ],
+    "backend/src/main/java/com/paiagent/engine/llm/ChatClientFactory.java": [],
+    "backend/src/main/java/com/paiagent/engine/llm/LLMNodeConfig.java": [],
+    "backend/src/main/java/com/paiagent/engine/llm/PromptTemplateService.java": [],
+    "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java": [],
+    "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java": [],
+    "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java": [],
+    "backend/src/main/java/com/paiagent/engine/skill/LoadSkillDetailFunction.java": [],
+    "backend/src/main/java/com/paiagent/engine/skill/LoadSkillReferenceFunction.java": [],
+    "backend/src/main/java/com/paiagent/engine/skill/Skill.java": [],
+    "backend/src/main/java/com/paiagent/engine/skill/SkillLoader.java": [],
+    "backend/src/main/java/com/paiagent/engine/skill/SkillRegistry.java": [],
+    "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java": [],
+    "backend/src/main/java/com/paiagent/entity/ExecutionSnapshot.java": [],
+    "backend/src/main/java/com/paiagent/entity/ExecutionVariable.java": [],
+    "backend/src/main/java/com/paiagent/entity/KnowledgeBase.java": [],
+    "backend/src/main/java/com/paiagent/entity/KnowledgeChunk.java": [],
+    "backend/src/main/java/com/paiagent/entity/KnowledgeDocument.java": [],
+    "backend/src/main/java/com/paiagent/entity/KnowledgeIndexTask.java": [],
+    "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java": [],
+    "backend/src/main/java/com/paiagent/entity/McpToolConfig.java": [],
+    "backend/src/main/java/com/paiagent/entity/NodeDefinition.java": [],
+    "backend/src/main/java/com/paiagent/entity/Workflow.java": [],
+    "backend/src/main/java/com/paiagent/interceptor/AuthInterceptor.java": [
+      "backend/src/main/java/com/paiagent/service/AuthService.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/ExecutionSnapshotMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/ExecutionSnapshot.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/ExecutionVariableMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/ExecutionVariable.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/KnowledgeBaseMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/KnowledgeBase.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/KnowledgeChunkMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/KnowledgeChunk.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/KnowledgeDocumentMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/KnowledgeDocument.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/KnowledgeIndexTaskMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/KnowledgeIndexTask.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/LLMGlobalConfigMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/McpToolConfigMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/McpToolConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/NodeDefinitionMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/NodeDefinition.java"
+    ],
+    "backend/src/main/java/com/paiagent/mapper/WorkflowMapper.java": [
+      "backend/src/main/java/com/paiagent/entity/Workflow.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/AgentMemoryService.java": [],
+    "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/AgnesVideoClient.java": [],
+    "backend/src/main/java/com/paiagent/service/AuthService.java": [
+      "backend/src/main/java/com/paiagent/config/JwtSecretProvider.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java": [
+      "backend/src/main/java/com/paiagent/dto/KnowledgeBaseRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgePreviewRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgeSearchRequest.java",
+      "backend/src/main/java/com/paiagent/dto/KnowledgeTextImportRequest.java",
+      "backend/src/main/java/com/paiagent/entity/KnowledgeBase.java",
+      "backend/src/main/java/com/paiagent/entity/KnowledgeChunk.java",
+      "backend/src/main/java/com/paiagent/entity/KnowledgeDocument.java",
+      "backend/src/main/java/com/paiagent/entity/KnowledgeIndexTask.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeBaseMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeChunkMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeDocumentMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeIndexTaskMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/LLMGlobalConfigService.java": [
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java",
+      "backend/src/main/java/com/paiagent/mapper/LLMGlobalConfigMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/McpToolConfigService.java": [
+      "backend/src/main/java/com/paiagent/dto/AgentPlanWebSearchMcpRequest.java",
+      "backend/src/main/java/com/paiagent/dto/McpToolConfigRequest.java",
+      "backend/src/main/java/com/paiagent/entity/McpToolConfig.java",
+      "backend/src/main/java/com/paiagent/mapper/McpToolConfigMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/MinioService.java": [
+      "backend/src/main/java/com/paiagent/config/MinioConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/NodeDefinitionService.java": [
+      "backend/src/main/java/com/paiagent/entity/NodeDefinition.java",
+      "backend/src/main/java/com/paiagent/mapper/NodeDefinitionMapper.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/OpenAiCompatibleImageClient.java": [],
+    "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java": [],
+    "backend/src/main/java/com/paiagent/service/SearchInfinityMcpClient.java": [
+      "backend/src/main/java/com/paiagent/entity/McpToolConfig.java"
+    ],
+    "backend/src/main/java/com/paiagent/service/StepFunImageClient.java": [],
+    "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java": [],
+    "backend/src/main/java/com/paiagent/service/WorkflowService.java": [
+      "backend/src/main/java/com/paiagent/dto/WorkflowRequest.java",
+      "backend/src/main/java/com/paiagent/dto/WorkflowResponse.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "backend/src/main/java/com/paiagent/mapper/WorkflowMapper.java"
+    ],
+    "backend/src/main/resources/application.yml": [],
+    "backend/src/main/resources/db/migration/V20250520__add_execution_snapshot_tables.sql": [],
+    "backend/src/main/resources/mapper/ExecutionSnapshotMapper.xml": [],
+    "backend/src/main/resources/mapper/ExecutionVariableMapper.xml": [],
+    "backend/src/main/resources/migration_add_engine_type.sql": [],
+    "backend/src/main/resources/schema.sql": [],
+    "backend/src/main/resources/skills/ai-podcast/SKILL.md": [],
+    "backend/src/main/resources/skills/ai-podcast/reference/script-template.md": [],
+    "backend/src/main/resources/skills/ai-podcast/reference/voice-guide.md": [],
+    "backend/src/test/java/com/paiagent/PaiAgentApplicationTests.java": [],
+    "backend/src/test/java/com/paiagent/engine/ConditionBranchRoutingTest.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/engine/dag/DAGParser.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/executor/NodeExecutorFactory.java",
+      "backend/src/main/java/com/paiagent/engine/executor/impl/ConditionNodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/executor/impl/InputNodeExecutor.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/ExecutionRecord.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java",
+      "backend/src/main/java/com/paiagent/mapper/ExecutionRecordMapper.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/WorkflowConfigParserTest.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/agent/tool/KnowledgeRetrieveToolTest.java": [
+      "backend/src/main/java/com/paiagent/engine/agent/AgentToolContext.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/KnowledgeBaseService.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/executor/impl/ConditionNodeExecutorTest.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/executor/impl/ImageGenerateNodeExecutorTest.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java",
+      "backend/src/main/java/com/paiagent/service/OpenAiCompatibleImageClient.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/StepFunImageClient.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/executor/impl/VideoGenerateNodeExecutorTest.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionEvent.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/service/AgentPlanConfigResolver.java",
+      "backend/src/main/java/com/paiagent/service/MinioService.java",
+      "backend/src/main/java/com/paiagent/service/ResolvedAgentPlanConfig.java",
+      "backend/src/main/java/com/paiagent/service/VolcengineAgentPlanClient.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/langgraph/LangGraphBasicTest.java": [],
+    "backend/src/test/java/com/paiagent/engine/langgraph/LangGraphWorkflowEngineTest.java": [
+      "backend/src/main/java/com/paiagent/dto/ExecutionResponse.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowConfig.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowEdge.java",
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/Workflow.java"
+    ],
+    "backend/src/test/java/com/paiagent/engine/llm/ChatClientFactoryTest.java": [],
+    "backend/src/test/java/com/paiagent/service/AgentPlanConfigResolverTest.java": [
+      "backend/src/main/java/com/paiagent/engine/model/WorkflowNode.java",
+      "backend/src/main/java/com/paiagent/entity/LLMGlobalConfig.java"
+    ],
+    "backend/src/test/java/com/paiagent/service/AgnesVideoClientTest.java": [],
+    "backend/src/test/java/com/paiagent/service/AuthServiceTest.java": [
+      "backend/src/main/java/com/paiagent/config/JwtSecretProvider.java"
+    ],
+    "backend/src/test/java/com/paiagent/service/KnowledgeBaseServiceTest.java": [
+      "backend/src/main/java/com/paiagent/entity/KnowledgeBase.java",
+      "backend/src/main/java/com/paiagent/entity/KnowledgeChunk.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeBaseMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeChunkMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeDocumentMapper.java",
+      "backend/src/main/java/com/paiagent/mapper/KnowledgeIndexTaskMapper.java"
+    ],
+    "backend/src/test/java/com/paiagent/service/OpenAiCompatibleImageClientTest.java": [],
+    "backend/src/test/java/com/paiagent/service/StepFunImageClientTest.java": [],
+    "frontend/.env.example": [],
+    "frontend/README.md": [],
+    "frontend/eslint.config.js": [],
+    "frontend/index.html": [],
+    "frontend/package.json": [],
+    "frontend/postcss.config.js": [],
+    "frontend/src/App.tsx": [
+      "frontend/src/pages/EditorPage.tsx",
+      "frontend/src/pages/KnowledgePage.tsx",
+      "frontend/src/pages/LoginPage.tsx",
+      "frontend/src/pages/McpToolPage.tsx"
+    ],
+    "frontend/src/api/auth.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/knowledge.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/llmConfig.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/mcpTools.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/media.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/skill.ts": [
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/api/workflow.ts": [
+      "frontend/src/config/api.ts",
+      "frontend/src/utils/auth.ts",
+      "frontend/src/utils/request.ts"
+    ],
+    "frontend/src/components/AudioPlayer.tsx": [],
+    "frontend/src/components/DebugDrawer.tsx": [
+      "frontend/src/api/workflow.ts",
+      "frontend/src/components/AudioPlayer.tsx",
+      "frontend/src/config/api.ts"
+    ],
+    "frontend/src/components/FlowCanvas.tsx": [
+      "frontend/src/store/workflowStore.ts"
+    ],
+    "frontend/src/components/LLMConfigModal.tsx": [
+      "frontend/src/api/llmConfig.ts",
+      "frontend/src/store/llmConfigStore.ts",
+      "frontend/src/utils/provider.ts"
+    ],
+    "frontend/src/components/NodePanel.tsx": [
+      "frontend/src/api/workflow.ts"
+    ],
+    "frontend/src/components/SkillSelector.tsx": [
+      "frontend/src/api/skill.ts"
+    ],
+    "frontend/src/config/api.ts": [],
+    "frontend/src/index.css": [],
+    "frontend/src/main.tsx": [
+      "frontend/src/App.tsx",
+      "frontend/src/index.css"
+    ],
+    "frontend/src/pages/EditorPage.tsx": [
+      "frontend/src/api/auth.ts",
+      "frontend/src/api/knowledge.ts",
+      "frontend/src/api/mcpTools.ts",
+      "frontend/src/api/media.ts",
+      "frontend/src/api/workflow.ts",
+      "frontend/src/components/DebugDrawer.tsx",
+      "frontend/src/components/FlowCanvas.tsx",
+      "frontend/src/components/LLMConfigModal.tsx",
+      "frontend/src/components/NodePanel.tsx",
+      "frontend/src/components/SkillSelector.tsx",
+      "frontend/src/store/authStore.ts",
+      "frontend/src/store/llmConfigStore.ts",
+      "frontend/src/store/workflowStore.ts",
+      "frontend/src/utils/auth.ts",
+      "frontend/src/utils/provider.ts",
+      "frontend/src/utils/workflowNode.ts"
+    ],
+    "frontend/src/pages/KnowledgePage.tsx": [
+      "frontend/src/api/knowledge.ts",
+      "frontend/src/store/llmConfigStore.ts",
+      "frontend/src/utils/provider.ts"
+    ],
+    "frontend/src/pages/LoginPage.tsx": [
+      "frontend/src/api/auth.ts",
+      "frontend/src/store/authStore.ts"
+    ],
+    "frontend/src/pages/MainPage.tsx": [
+      "frontend/src/api/auth.ts",
+      "frontend/src/store/authStore.ts",
+      "frontend/src/utils/auth.ts"
+    ],
+    "frontend/src/pages/McpToolPage.tsx": [
+      "frontend/src/api/mcpTools.ts"
+    ],
+    "frontend/src/store/authStore.ts": [
+      "frontend/src/utils/auth.ts"
+    ],
+    "frontend/src/store/llmConfigStore.ts": [
+      "frontend/src/api/llmConfig.ts"
+    ],
+    "frontend/src/store/workflowStore.ts": [
+      "frontend/src/utils/workflowNode.ts"
+    ],
+    "frontend/src/utils/auth.ts": [
+      "frontend/src/config/api.ts"
+    ],
+    "frontend/src/utils/provider.ts": [],
+    "frontend/src/utils/request.ts": [
+      "frontend/src/config/api.ts",
+      "frontend/src/utils/auth.ts"
+    ],
+    "frontend/src/utils/workflowNode.ts": [],
+    "frontend/src/vite-env.d.ts": [],
+    "frontend/tailwind.config.js": [],
+    "frontend/tsconfig.app.json": [],
+    "frontend/tsconfig.json": [],
+    "frontend/tsconfig.node.json": [],
+    "frontend/vite.config.ts": [],
+    "show": [],
+    "test_llm_config.py": []
+  }
+}
