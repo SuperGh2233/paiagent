@@ -116,7 +116,7 @@ const LLMConfigModal: React.FC<LLMConfigModalProps> = ({ visible, onClose }) => 
       form.setFieldsValue({
         provider: config.provider,
         apiUrl: config.apiUrl,
-        apiKey: config.apiKey,
+        apiKey: '',
         model: config.model,
         ttsModel: config.ttsModel,
         embeddingModel: config.embeddingModel,
@@ -149,7 +149,7 @@ const LLMConfigModal: React.FC<LLMConfigModalProps> = ({ visible, onClose }) => 
         provider,
         configName: editingConfig?.configName || buildInternalConfigName(provider, values.model, values.ttsModel),
         apiUrl: values.apiUrl,
-        apiKey: values.apiKey,
+        apiKey: values.apiKey?.trim() || undefined,
         model: values.model,
         ttsModel: hasCapability('tts') ? values.ttsModel : undefined,
         embeddingModel: hasCapability('embedding') ? values.embeddingModel : undefined,
@@ -434,9 +434,9 @@ const LLMConfigModal: React.FC<LLMConfigModalProps> = ({ visible, onClose }) => 
             <Form.Item
               name="apiKey"
               label="API 密钥"
-              rules={[{ required: true, message: '请输入 API 密钥' }]}
+              rules={[{ required: !editingConfig, message: '请输入 API 密钥' }]}
             >
-              <Input.Password placeholder="输入 API 密钥" />
+              <Input.Password placeholder={editingConfig?.apiKeyConfigured ? "已配置密钥，留空保持不变" : "输入 API 密钥"} />
             </Form.Item>
 
             <Form.Item
