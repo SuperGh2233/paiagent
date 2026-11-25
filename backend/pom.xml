@@ -163,8 +163,6 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <fork>true</fork>
-          <executable>${env.JAVA_HOME}/bin/javac</executable>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>
@@ -184,12 +182,6 @@
               <artifactId>lombok</artifactId>
             </exclude>
           </excludes>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <jvm>${env.JAVA_HOME}/bin/java</jvm>
         </configuration>
       </plugin>
     </plugins>
