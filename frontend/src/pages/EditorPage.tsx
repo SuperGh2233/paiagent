@@ -1278,8 +1278,8 @@ const EditorPage = () => {
       } else {
         message.error(result.message || '原图上传失败');
       }
-    } catch (error: any) {
-      message.error(error?.message || '原图上传失败');
+    } catch (error: unknown) {
+      message.error(error instanceof Error ? error.message : '原图上传失败');
     }
   };
   const getAgentPlanInputParams = () => (
