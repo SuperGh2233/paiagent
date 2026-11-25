@@ -64,10 +64,10 @@ class VideoGenerateNodeExecutorTest {
                 minioService,
                 0
         );
-        when(node.getId()).thenReturn("node-1");
-        when(node.getType()).thenReturn("video_generate");
-        when(node.getData()).thenReturn(Map.of());
-        when(configResolver.resolve(node, "video")).thenReturn(config);
+        lenient().when(node.getId()).thenReturn("node-1");
+        lenient().when(node.getType()).thenReturn("video_generate");
+        lenient().when(node.getData()).thenReturn(Map.of());
+        lenient().when(configResolver.resolve(node, "video")).thenReturn(config);
     }
 
     @Test
