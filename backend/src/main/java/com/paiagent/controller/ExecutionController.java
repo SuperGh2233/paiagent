@@ -165,8 +165,10 @@ public class ExecutionController {
     }
     
     @Operation(summary = "实时执行工作流(SSE)")
-    @GetMapping(value = "/{id}/execute/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public SseEmitter executeWorkflowStream(@PathVariable Long id, @RequestParam String inputData) {
+    @PostMapping(value = "/{id}/execute/stream", consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public SseEmitter executeWorkflowStream(@PathVariable Long id, @Valid @RequestBody ExecutionRequest request) {
+        String inputData = request.getInputData();
         SseEmitter emitter = new SseEmitter(300000L);
         String emitterId = id + "_" + System.currentTimeMillis();
         emitters.put(emitterId, emitter);
