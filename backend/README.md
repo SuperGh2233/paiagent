@@ -45,8 +45,8 @@ MYSQL_PASSWORD=your_mysql_password
 JWT_SECRET=your_jwt_secret_key_minimum_32_characters
 
 # 默认管理员账户（可选，留空则禁用）
-APP_AUTH_DEFAULT_USERNAME=admin
-APP_AUTH_DEFAULT_PASSWORD=admin123
+APP_AUTH_DEFAULT_USERNAME=your_operator_name
+APP_AUTH_DEFAULT_PASSWORD=use_a_long_random_password
 ```
 
 或通过系统环境变量设置：
@@ -60,7 +60,7 @@ export JWT_SECRET=your_jwt_secret
 ### 3. 运行项目
 
 ```bash
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 `.env` 会在启动时自动导入；如果你是从仓库根目录运行，也会自动读取 `backend/.env`。
@@ -87,12 +87,9 @@ APP_AUTH_DEFAULT_USERNAME=admin
 APP_AUTH_DEFAULT_PASSWORD=admin123
 ```
 
-**生产环境建议**：
-- 禁用默认账户：将两个变量都设为空值
-- 或添加用户注册/管理功能（待实现）
-- 使用强密码（至少 8 位，包含大小写字母和数字）
+当前版本只有一个通过环境变量配置的操作员账户，**尚未实现注册、多用户管理或角色权限**。两个变量留空时登录会被禁用；应用配置不再内置 `admin/admin123` 回退值。
 
-> ⚠️ **安全警告**：默认账户仅用于开发环境，生产环境必须修改或禁用！
+> ⚠️ 不要把单操作员开发认证当作生产级身份管理。公网部署前仍需补齐用户生命周期、密码哈希、权限模型、HTTPS 和安全会话管理。
 
 ## API 接口
 

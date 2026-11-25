@@ -40,7 +40,6 @@ interface DebugDrawerProps {
   workflowId: number | null;
   totalNodeCount: number;
   onClose: () => void;
-  onExecute: (inputData: string) => Promise<ExecutionResponse>;
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> => (

@@ -9,9 +9,11 @@
 
 # Maven
 backend/target/
-backend/.mvn/
-backend/mvnw
-backend/mvnw.cmd
+
+# Build artifacts and generated scans
+*.class
+/BOOT-INF/
+/tmp-scan-backup/
 
 # Node
 frontend/node_modules/

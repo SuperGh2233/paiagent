@@ -11,7 +11,7 @@ import { logout } from '../api/auth';
 import { useWorkflowStore } from '../store/workflowStore';
 import { useAuthStore } from '../store/authStore';
 import { useLLMConfigStore } from '../store/llmConfigStore';
-import { createWorkflow, updateWorkflow, executeWorkflow, getWorkflows, getWorkflow, deleteWorkflow, Workflow } from '../api/workflow';
+import { createWorkflow, updateWorkflow, getWorkflows, getWorkflow, deleteWorkflow, Workflow } from '../api/workflow';
 import { getKnowledgeBases, KnowledgeBase } from '../api/knowledge';
 import { getMcpTools, McpToolConfig } from '../api/mcpTools';
 import { uploadWorkflowImage } from '../api/media';
@@ -505,20 +505,6 @@ const EditorPage = () => {
       message.error('保存失败');
     } finally {
       setSaving(false);
-    }
-  };
-
-  // 执行工作流(从调试抽屉调用)
-  const handleExecute = async (inputData: string) => {
-    if (!activeWorkflowId) {
-      throw new Error('请先保存工作流');
-    }
-
-    const result = await executeWorkflow(activeWorkflowId, inputData);
-    if (result.code === 200) {
-      return result.data;
-    } else {
-      throw new Error(result.message || '执行失败');
     }
   };
 
@@ -1278,8 +1264,8 @@ const EditorPage = () => {
       } else {
         message.error(result.message || '原图上传失败');
       }
-    } catch (error: any) {
-      message.error(error?.message || '原图上传失败');
+    } catch (error: unknown) {
+      message.error(error instanceof Error ? error.message : '原图上传失败');
     }
   };
   const getAgentPlanInputParams = () => (
@@ -2929,7 +2915,6 @@ const EditorPage = () => {
         workflowId={activeWorkflowId}
         totalNodeCount={nodes.length}
         onClose={() => setDebugDrawerOpen(false)}
-        onExecute={handleExecute}
       />
 
       {/* 加载工作流对话框 */}

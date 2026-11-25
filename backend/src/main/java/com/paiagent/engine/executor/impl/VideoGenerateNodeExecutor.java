@@ -27,16 +27,26 @@ public class VideoGenerateNodeExecutor extends AbstractAgentPlanNodeExecutor {
     private final VolcengineAgentPlanClient agentPlanClient;
     private final AgnesVideoClient agnesVideoClient;
     private final MinioService minioService;
+    private final long pollIntervalMs;
 
     @Autowired
     public VideoGenerateNodeExecutor(AgentPlanConfigResolver configResolver,
                                      VolcengineAgentPlanClient agentPlanClient,
                                      AgnesVideoClient agnesVideoClient,
                                      MinioService minioService) {
+        this(configResolver, agentPlanClient, agnesVideoClient, minioService, POLL_INTERVAL_MS);
+    }
+
+    VideoGenerateNodeExecutor(AgentPlanConfigResolver configResolver,
+                              VolcengineAgentPlanClient agentPlanClient,
+                              AgnesVideoClient agnesVideoClient,
+                              MinioService minioService,
+                              long pollIntervalMs) {
         this.configResolver = configResolver;
         this.agentPlanClient = agentPlanClient;
         this.agnesVideoClient = agnesVideoClient;
         this.minioService = minioService;
+        this.pollIntervalMs = Math.max(0, pollIntervalMs);
     }
 
     public VideoGenerateNodeExecutor(AgentPlanConfigResolver configResolver,
@@ -97,7 +107,7 @@ public class VideoGenerateNodeExecutor extends AbstractAgentPlanNodeExecutor {
         Map<String, Object> task = Map.of("status", "running");
         long startedAt = System.currentTimeMillis();
         for (int i = 0; i < MAX_POLLS; i++) {
-            Thread.sleep(POLL_INTERVAL_MS);
+            Thread.sleep(pollIntervalMs);
             task = getVideoTask(agnesProvider, config, taskId);
             String status = String.valueOf(task.getOrDefault("status", ""));
             emit(node, progressCallback, buildPollingMessage(taskId, i + 1, status, task.get("progress"), startedAt),

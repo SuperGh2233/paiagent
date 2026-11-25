@@ -127,7 +127,7 @@ export const deleteWorkflow = (id: number): Promise<ApiResult<void>> => {
 /**
  * 执行工作流
  */
-export const executeWorkflow = (id: number, inputData: string): Promise<ApiResult<any>> => {
+export const executeWorkflow = (id: number, inputData: string): Promise<ApiResult<ExecutionResponse>> => {
   return api.post(`/api/workflows/${id}/execute`, { inputData });
 };
 
@@ -163,91 +163,123 @@ export interface ExecutionEvent {
   nodeName?: string;
   status?: string;
   message?: string;
-  data?: any;
+  data?: unknown;
   timestamp?: number;
 }
 
 export const executeWorkflowStream = async (
-  id: number, 
-  inputData: string, 
+  id: number,
+  inputData: string,
   onEvent: (event: ExecutionEvent) => void,
   onComplete: () => void,
   onError: (error: Error) => void
-) => {
+): Promise<AbortController | null> => {
   const token = await ensureValidAccessToken();
-  
+
   if (!token) {
     clearStoredAuth();
     window.location.href = '/login';
     onError(new Error('未登录'));
     return null;
   }
-  
-  const url = buildBackendUrl(
-    `/api/workflows/${id}/execute/stream?inputData=${encodeURIComponent(inputData)}&token=${token}`
-  );
-  
-  const eventSource = new EventSource(url);
-  
-  let hasReceivedData = false;
-  
-  eventSource.addEventListener('WORKFLOW_START', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-  });
-  
-  eventSource.addEventListener('NODE_START', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-  });
-  
-  eventSource.addEventListener('NODE_SUCCESS', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-  });
-  
-  eventSource.addEventListener('NODE_PROGRESS', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-  });
-  
-  eventSource.addEventListener('NODE_ERROR', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-  });
-  
-  eventSource.addEventListener('WORKFLOW_COMPLETE', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-    eventSource.close();
-    onComplete();
-  });
-  
-  eventSource.addEventListener('ERROR', (e) => {
-    hasReceivedData = true;
-    const event = JSON.parse(e.data) as ExecutionEvent;
-    onEvent(event);
-    eventSource.close();
-    onError(new Error(event.message || '执行失败'));
-  });
-  
-  eventSource.onerror = () => {
-    eventSource.close();
-    
-    if (!hasReceivedData) {
+
+  const controller = new AbortController();
+
+  try {
+    const response = await fetch(buildBackendUrl(`/api/workflows/${id}/execute/stream`), {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        Accept: 'text/event-stream',
+      },
+      body: JSON.stringify({ inputData }),
+      signal: controller.signal,
+    });
+
+    if (response.status === 401) {
       clearStoredAuth();
       window.location.href = '/login';
-      onError(new Error('认证失败,请重新登录'));
-    } else {
-      onError(new Error('连接中断'));
+      onError(new Error('认证失败，请重新登录'));
+      return null;
     }
-  };
-  
-  return eventSource;
+    if (!response.ok) {
+      throw new Error(`工作流连接失败（HTTP ${response.status}）`);
+    }
+    if (!response.body) {
+      throw new Error('浏览器不支持流式响应');
+    }
+
+    const readStream = async () => {
+      const reader = response.body!.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let terminalEventReceived = false;
+
+      const dispatchBlock = (block: string) => {
+        let eventName = 'message';
+        const dataLines: string[] = [];
+
+        for (const line of block.replace(/\r\n/g, '\n').split('\n')) {
+          if (line.startsWith('event:')) {
+            eventName = line.slice(6).trim();
+          } else if (line.startsWith('data:')) {
+            dataLines.push(line.slice(5).replace(/^ /, ''));
+          }
+        }
+
+        if (dataLines.length === 0) return;
+        const event = JSON.parse(dataLines.join('\n')) as ExecutionEvent;
+        onEvent(event);
+
+        if (eventName === 'ERROR') {
+          terminalEventReceived = true;
+          onError(new Error(event.message || '工作流执行失败'));
+        } else if (eventName === 'WORKFLOW_COMPLETE') {
+          terminalEventReceived = true;
+          onComplete();
+        }
+      };
+
+      try {
+        while (true) {
+          const { value, done } = await reader.read();
+          if (value) buffer += decoder.decode(value, { stream: !done });
+          if (done) {
+            buffer += decoder.decode();
+            buffer = buffer.replace(/\r\n/g, '\n');
+            if (buffer.trim()) dispatchBlock(buffer);
+            break;
+          }
+
+          buffer = buffer.replace(/\r\n/g, '\n');
+          let boundary = buffer.indexOf('\n\n');
+          while (boundary >= 0) {
+            const block = buffer.slice(0, boundary);
+            buffer = buffer.slice(boundary + 2);
+            dispatchBlock(block);
+            if (terminalEventReceived) {
+              await reader.cancel();
+              return;
+            }
+            boundary = buffer.indexOf('\n\n');
+          }
+        }
+
+        if (!terminalEventReceived) onComplete();
+      } catch (error) {
+        if (error instanceof Error && error.name === 'AbortError') return;
+        onError(error instanceof Error ? error : new Error('流式连接中断'));
+      } finally {
+        reader.releaseLock();
+      }
+    };
+
+    void readStream();
+    return controller;
+  } catch (error) {
+    if (error instanceof Error && error.name === 'AbortError') return null;
+    onError(error instanceof Error ? error : new Error('工作流连接失败'));
+    return null;
+  }
 };

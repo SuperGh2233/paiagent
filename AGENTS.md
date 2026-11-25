@@ -4,16 +4,16 @@ This file provides guidance to Qoder (qoder.com) when working with code in this 
 
 ## Project Overview
 
-PaiAgent-one is an enterprise-grade AI workflow orchestration platform with visual flow editor. It uses a custom DAG (Directed Acyclic Graph) engine to execute workflows composed of LLM nodes (OpenAI, DeepSeek, Qwen) and tool nodes (TTS, etc.).
+PaiAgent is an AI workflow orchestration platform with a visual flow editor. It uses a custom DAG (Directed Acyclic Graph) engine to execute workflows composed of LLM nodes (OpenAI, DeepSeek, Qwen) and tool nodes (TTS, etc.).
 
 ## Build & Development Commands
 
 ### Backend (Spring Boot)
 ```bash
 cd backend
-./mvnw spring-boot:run              # Start backend server (default port 8084)
-./mvnw clean package                # Build JAR package
-./mvnw test                         # Run all tests
+mvn spring-boot:run              # Start backend server (default port 8084)
+mvn clean package                # Build JAR package
+mvn test                         # Run all tests
 ./mvnw test -Dtest=ClassName        # Run single test class
 ./mvnw test -Dtest=ClassName#methodName  # Run single test method
 ```
@@ -38,7 +38,7 @@ mysql -u root -p < backend/src/main/resources/schema.sql
 **Backend:** Copy `backend/.env.example` to `backend/.env` and configure:
 - `MYSQL_PASSWORD` - Required for database connection
 - `JWT_SECRET` - Required for token signing (min 32 chars for production)
-- `APP_AUTH_DEFAULT_USERNAME/PASSWORD` - Default admin account (default: admin/admin123)
+- `APP_AUTH_DEFAULT_USERNAME/PASSWORD` - Optional single-operator account; blank disables login and no registration flow is implemented
 - `SERVER_PORT` - Backend port (default: 8084)
 
 **Frontend:** Copy `frontend/.env.example` to `frontend/.env.local` and configure:
@@ -123,7 +123,7 @@ Key features:
 
 - **Backend**: Spring Boot 3.4.1, Java 21, MyBatis-Plus 3.5.5, MySQL 8.0+, FastJSON2, Spring AI 1.0.0-M5, LangGraph4j 1.8.0-beta3, JJWT 0.12.7
 - **Frontend**: React 18, TypeScript 5.6, Vite 6, ReactFlow (@xyflow/react), Ant Design 6, Tailwind CSS 4, Zustand 5
-- **Authentication**: JWT-based auth (default: admin/admin123, configurable via env)
+- **Authentication**: JWT-based single-operator login configured via environment variables; no built-in user registration or tenant isolation
 - **API Docs**: Swagger UI at http://localhost:8084/swagger-ui.html
 
 ## Development Notes
