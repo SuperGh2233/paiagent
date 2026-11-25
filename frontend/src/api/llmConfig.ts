@@ -5,7 +5,7 @@ export interface LLMGlobalConfig {
   provider: string;
   configName: string;
   apiUrl: string;
-  apiKey: string;
+  apiKeyConfigured: boolean;
   model: string;
   ttsModel?: string;
   embeddingModel?: string;
@@ -23,7 +23,7 @@ export interface LLMConfigRequest {
   provider: string;
   configName: string;
   apiUrl: string;
-  apiKey: string;
+  apiKey?: string;
   model: string;
   ttsModel?: string;
   embeddingModel?: string;
