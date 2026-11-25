@@ -22,8 +22,8 @@ class LLMGlobalConfigResponseTest {
         String json = new ObjectMapper().writeValueAsString(response);
 
         assertTrue(response.apiKeyConfigured());
-        assertTrue(json.contains("\\"apiKeyConfigured\\":true"));
+        assertTrue(json.contains("\"apiKeyConfigured\":true"));
         assertFalse(json.contains("sk-test-secret-must-not-leak"));
-        assertFalse(json.contains("\\"apiKey\\":"));
+        assertFalse(json.contains("\"apiKey\":"));
     }
 }
