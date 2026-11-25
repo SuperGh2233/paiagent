@@ -66,6 +66,13 @@ public class LLMGlobalConfigService extends ServiceImpl<LLMGlobalConfigMapper, L
      */
     @Transactional
     public LLMGlobalConfig saveConfig(LLMGlobalConfig config) {
+        if (config.getId() != null && (config.getApiKey() == null || config.getApiKey().isBlank())) {
+            LLMGlobalConfig existing = this.getById(config.getId());
+            if (existing == null) {
+                throw new IllegalArgumentException("配置不存在");
+            }
+            config.setApiKey(existing.getApiKey());
+        }
         normalizeConfig(config);
         validateConfig(config);
         purgeDeletedDuplicate(config);
