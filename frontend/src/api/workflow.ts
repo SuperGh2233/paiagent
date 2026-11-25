@@ -127,7 +127,7 @@ export const deleteWorkflow = (id: number): Promise<ApiResult<void>> => {
 /**
  * 执行工作流
  */
-export const executeWorkflow = (id: number, inputData: string): Promise<ApiResult<any>> => {
+export const executeWorkflow = (id: number, inputData: string): Promise<ApiResult<ExecutionResponse>> => {
   return api.post(`/api/workflows/${id}/execute`, { inputData });
 };
 
@@ -163,7 +163,7 @@ export interface ExecutionEvent {
   nodeName?: string;
   status?: string;
   message?: string;
-  data?: any;
+  data?: unknown;
   timestamp?: number;
 }
 
