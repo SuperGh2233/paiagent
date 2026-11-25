@@ -303,13 +303,13 @@ const LLMConfigModal: React.FC<LLMConfigModalProps> = ({ visible, onClose }) => 
       key: 'capabilities',
       width: 300,
       ellipsis: true,
-      render: (_: any, record: LLMGlobalConfig) => getCapabilitySummary(record)
+      render: (_: unknown, record: LLMGlobalConfig) => getCapabilitySummary(record)
     },
     {
       title: '操作',
       key: 'action',
       width: 96,
-      render: (_: any, record: LLMGlobalConfig) => (
+      render: (_: unknown, record: LLMGlobalConfig) => (
         <Space size="small">
           <Button
             type="link"
