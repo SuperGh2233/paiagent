@@ -38,8 +38,8 @@ export const useLLMConfigStore = create<LLMConfigState>((set, get) => ({
       } else {
         set({ error: result.message, loading: false });
       }
-    } catch (error: any) {
-      set({ error: error.message || '获取配置列表失败', loading: false });
+    } catch (error: unknown) {
+      set({ error: error instanceof Error ? error.message : '获取配置列表失败', loading: false });
     }
   },
 
@@ -58,8 +58,8 @@ export const useLLMConfigStore = create<LLMConfigState>((set, get) => ({
       } else {
         set({ error: result.message, loading: false });
       }
-    } catch (error: any) {
-      set({ error: error.message || '获取配置列表失败', loading: false });
+    } catch (error: unknown) {
+      set({ error: error instanceof Error ? error.message : '获取配置列表失败', loading: false });
     }
   },
 
@@ -74,8 +74,8 @@ export const useLLMConfigStore = create<LLMConfigState>((set, get) => ({
         set({ error: result.message, loading: false });
         return null;
       }
-    } catch (error: any) {
-      set({ error: error.message || '保存配置失败', loading: false });
+    } catch (error: unknown) {
+      set({ error: error instanceof Error ? error.message : '保存配置失败', loading: false });
       return null;
     }
   },
@@ -94,8 +94,8 @@ export const useLLMConfigStore = create<LLMConfigState>((set, get) => ({
         set({ error: result.message, loading: false });
         return false;
       }
-    } catch (error: any) {
-      set({ error: error.message || '删除配置失败', loading: false });
+    } catch (error: unknown) {
+      set({ error: error instanceof Error ? error.message : '删除配置失败', loading: false });
       return false;
     }
   },
@@ -111,8 +111,8 @@ export const useLLMConfigStore = create<LLMConfigState>((set, get) => ({
         set({ error: result.message, loading: false });
         return false;
       }
-    } catch (error: any) {
-      set({ error: error.message || '设置默认配置失败', loading: false });
+    } catch (error: unknown) {
+      set({ error: error instanceof Error ? error.message : '设置默认配置失败', loading: false });
       return false;
     }
   },
