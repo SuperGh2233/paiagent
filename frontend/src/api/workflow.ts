@@ -220,7 +220,7 @@ export const executeWorkflowStream = async (
         let eventName = 'message';
         const dataLines: string[] = [];
 
-        for (const line of block.replace(/\\r\\n/g, '\\n').split('\\n')) {
+        for (const line of block.replace(/\r\n/g, '\n').split('\n')) {
           if (line.startsWith('event:')) {
             eventName = line.slice(6).trim();
           } else if (line.startsWith('data:')) {
@@ -229,7 +229,7 @@ export const executeWorkflowStream = async (
         }
 
         if (dataLines.length === 0) return;
-        const event = JSON.parse(dataLines.join('\\n')) as ExecutionEvent;
+        const event = JSON.parse(dataLines.join('\n')) as ExecutionEvent;
         onEvent(event);
 
         if (eventName === 'ERROR') {
@@ -247,13 +247,13 @@ export const executeWorkflowStream = async (
           if (value) buffer += decoder.decode(value, { stream: !done });
           if (done) {
             buffer += decoder.decode();
-            buffer = buffer.replace(/\\r\\n/g, '\\n');
+            buffer = buffer.replace(/\r\n/g, '\n');
             if (buffer.trim()) dispatchBlock(buffer);
             break;
           }
 
-          buffer = buffer.replace(/\\r\\n/g, '\\n');
-          let boundary = buffer.indexOf('\\n\\n');
+          buffer = buffer.replace(/\r\n/g, '\n');
+          let boundary = buffer.indexOf('\n\n');
           while (boundary >= 0) {
             const block = buffer.slice(0, boundary);
             buffer = buffer.slice(boundary + 2);
@@ -262,7 +262,7 @@ export const executeWorkflowStream = async (
               await reader.cancel();
               return;
             }
-            boundary = buffer.indexOf('\\n\\n');
+            boundary = buffer.indexOf('\n\n');
           }
         }
 
